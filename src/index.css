@@ -1,0 +1,173 @@
+@import './styles/grid-pattern.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 dark:bg-gray-800/80 backdrop-blur-md rounded-lg shadow-md;
+  }
+
+  .hover-card {
+    @apply transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-600 hover:bg-gray-700 text-white transition-colors duration-200;
+  }
+
+  .btn-danger {
+    @apply bg-red-600 hover:bg-red-700 text-white transition-colors duration-200;
+  }
+
+  .btn-success {
+    @apply bg-green-600 hover:bg-green-700 text-white transition-colors duration-200;
+  }
+
+  .btn-warning {
+    @apply bg-yellow-600 hover:bg-yellow-700 text-white transition-colors duration-200;
+  }
+
+  .btn-info {
+    @apply bg-blue-400 hover:bg-blue-500 text-white transition-colors duration-200;
+  }
+
+  button:disabled {
+    @apply opacity-50 cursor-not-allowed;
+  }
+
+  footer {
+    @apply bg-gradient-to-b from-transparent to-gray-900/50 backdrop-blur-sm;
+  }
+
+  footer a {
+    @apply relative;
+  }
+
+  footer a::after {
+    content: '';
+    @apply absolute left-0 bottom-0 w-0 h-0.5 bg-blue-400 transition-all duration-300;
+  }
+
+  footer a:hover::after {
+    @apply w-full;
+  }
+
+  footer .social-icon {
+    @apply transform transition-all duration-300;
+  }
+
+  footer .social-icon:hover {
+    @apply scale-110 text-blue-400;
+  }
+
+  footer .heart-icon {
+    @apply animate-pulse;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-500;
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
