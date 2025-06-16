@@ -1,81 +1,146 @@
-# Procedural Maze Generator
+# 🎮 Procedural Maze Generator
 
-A React-based web application that generates and solves mazes using various algorithms. The application features a responsive design with light/dark theme support and allows users to visualize the maze generation and solving process step by step.
+A modern, interactive web application for generating and solving mazes using various algorithms. Built with React, TypeScript, and Tailwind CSS.
 
-## Features
+![Maze Generator Demo](https://github.com/omsherikar/Maze_Solver/blob/main/demo.gif)
 
-- Generate mazes with adjustable dimensions (width and height)
-- Choose between two maze generation algorithms:
+## ✨ Features
+
+- **Multiple Generation Algorithms**
   - Recursive Backtracking
   - Prim's Algorithm
-- Visualize maze generation and solving process with animations
-- Solve mazes using two different algorithms:
+  - Kruskal's Algorithm
+
+- **Various Solving Methods**
   - Breadth-First Search (BFS)
   - A* Search
-- Control maze generation and solving with Start, Pause, and Reset functionality
-- Set custom start and end points
-- Export mazes as PNG images
-- Responsive design for both desktop and mobile devices
-- Light/dark theme support
-- Keyboard accessibility and ARIA attributes
+  - Dijkstra's Algorithm
 
-## Technologies Used
+- **Interactive Controls**
+  - Adjustable maze dimensions (5x5 to 100x100)
+  - Customizable cell size
+  - Animation speed control
+  - Start/End point placement
+  - Demo mode for quick visualization
 
-- React with TypeScript
-- Tailwind CSS for styling
-- Vite for build tooling
-- HTML-to-Image for maze export
-- Heroicons for UI icons
+- **Visual Features**
+  - Real-time maze generation animation
+  - Path solving visualization
+  - Dark/Light theme support
+  - Responsive design
+  - Beautiful UI with glass-morphism effects
+  - Animated background
 
-## Getting Started
+- **Performance Metrics**
+  - Generation time
+  - Solving time
+  - Path length
+  - Cells explored
 
-1. Clone the repository
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm (v6 or higher)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/omsherikar/Maze_Solver.git
+   cd Maze_Solver
+   ```
+
 2. Install dependencies:
    ```bash
    npm install
    ```
+
 3. Start the development server:
    ```bash
    npm run dev
    ```
-4. Open your browser and navigate to `http://localhost:5173`
 
-## Usage
+4. Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-1. Adjust the maze dimensions using the width and height inputs
-2. Select a maze generation algorithm
+## 🎯 Usage
+
+### Generating a Maze
+
+1. Set the desired dimensions using the width and height sliders
+2. Choose a generation algorithm from the dropdown
 3. Click "Generate Maze" to create a new maze
-4. Set start and end points by clicking on the maze cells
-5. Choose a solving algorithm
-6. Click "Solve Maze" to find the path
-7. Use the Pause button to pause/resume the generation or solving process
-8. Export the maze as a PNG image using the Export button
-9. Toggle between light and dark themes using the theme button
 
-## Project Structure
+### Solving the Maze
+
+1. Click and drag to set the start point (blue)
+2. Click and drag to set the end point (red)
+3. Select a solving algorithm
+4. Click "Solve Maze" to find the path
+
+### Additional Controls
+
+- **Demo Button**: Automatically generates and solves a maze
+- **Pause/Resume**: Control the animation
+- **Reset**: Clear the current maze
+- **Export**: Save the maze as a PNG image
+- **Theme Toggle**: Switch between light and dark modes
+
+## 🛠️ Technologies Used
+
+- **Frontend Framework**: React with TypeScript
+- **Styling**: Tailwind CSS
+- **Build Tool**: Vite
+- **State Management**: React Context API
+- **Icons**: React Icons
+- **Animations**: CSS Transitions and Keyframes
+- **Code Quality**: ESLint, TypeScript
+
+## 📁 Project Structure
 
 ```
 src/
-├── components/
-│   ├── Controls.tsx      # Maze generation and solving controls
-│   ├── Maze.tsx         # Maze visualization component
-│   └── ThemeToggle.tsx  # Theme switching component
-├── context/
-│   └── MazeContext.tsx  # Global state management
-├── utils/
-│   ├── mazeGenerators.ts # Maze generation algorithms
-│   ├── mazeSolvers.ts   # Maze solving algorithms
-│   └── mazeUtils.ts     # Utility functions
-├── types/
-│   └── maze.ts         # TypeScript type definitions
-├── App.tsx             # Main application component
-└── main.tsx           # Application entry point
+├── algorithms/         # Maze generation and solving algorithms
+├── components/         # React components
+├── context/           # React context providers
+├── styles/            # Global styles and animations
+├── types/             # TypeScript type definitions
+├── utils/             # Utility functions
+└── App.tsx            # Main application component
 ```
 
-## Contributing
+## 🎨 Customization
+
+### Theme Colors
+
+The application supports both light and dark themes. You can customize the colors by modifying the theme variables in `src/index.css`.
+
+### Animation Speed
+
+Adjust the animation speed using the slider in the controls panel. The speed ranges from 1x (slow) to 10x (fast).
+
+## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## License
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👨‍💻 Author
+
+Om Sherikar
+- GitHub: [@omsherikar](https://github.com/omsherikar)
+
+## 🙏 Acknowledgments
+
+- Inspired by various maze generation algorithms
+- Built with modern web technologies
+- Special thanks to the React and Tailwind CSS communities
