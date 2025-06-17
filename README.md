@@ -8,9 +8,9 @@ A modern, interactive web application for generating and solving mazes using var
 [![Maze Solver Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
 
 ### Screenshots
-![Maze Generation](screenshots/generation.png)
-![Maze Solving](screenshots/solving.png)
-![Dark Theme](screenshots/dark-theme.png)
+![Maze Generation](generation.png)
+![Maze Solving](solving.png)
+![Dark Theme](dark-theme.png)
 
 ![Maze Generator Demo](https://github.com/omsherikar/Maze_Solver/blob/main/demo.gif)
 
